@@ -173,8 +173,8 @@ async def account_login(bot: Client, m: Message):
             elif "edge.api.brightcove.com" in url:
               b ='bcov_auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MjQ2MDE5NzQsImNvbiI6eyJpc0FkbWluIjpmYWxzZSwiYXVzZXIiOiJVMFZ6TkdGU2NuQlZjR3h5TkZwV09FYzBURGxOZHowOSIsImlkIjoiZDFWS0wzZERiR1kxZVdsV04yUlVXV0ozTjB4NVp6MDkiLCJmaXJzdF9uYW1lIjoiV0hoMmRFNXhSRTFTTmpaaFJFdHVNbVphU1haeGR6MDkiLCJlbWFpbCI6ImNIVlFSWE5hWjJsMWVXNXdNelpLUjBKRlkzbFdXbTUyU1c1S1Qyc3dUbEoxTW05UGNFd3hWbU42T0QwPSIsInBob25lIjoiVDFaWlNqVnlSSEZQVUVSUmJFZFBlak5RUzFSM1FUMDkiLCJhdmF0YXIiOiJLM1ZzY1M4elMwcDBRbmxrYms4M1JEbHZla05pVVQwOSIsInJlZmVycmFsX2NvZGUiOiJjVTVQZGtkV2Exa3ZWeTl3VnpNNFdVZEZNWGw2WnowOSIsImRldmljZV90eXBlIjoiYW5kcm9pZCIsImRldmljZV92ZXJzaW9uIjoiUShBbmRyb2lkIDEwLjApIiwiZGV2aWNlX21vZGVsIjoiU2Ftc3VuZyBTTS1TOTE4QiIsInJlbW90ZV9hZGRyIjoiNTQuMTY3LjExNi4zOCJ9fQ.PVRJ2hbs7smbVRS9YI8iEeyhHxi61JySrmX7I81-AqNGAjl6Pg-ASAFV7Cxy8Dojakj35pJdDrUz7hMfnk5h68DraxGJBKKVJYmtJdfQaOa9p4Nr8KRdSELk9HNxhzRYwhDRHqkK9piq58wGGGmE2jZ0t_IRn2RymlqP4psiDtaNhHBH8Etk1dV9qJVRU3CaBNVXXkOBERJ5RFNO6vpDmBrmMx6hM-EV0A_U7v0BURhhaa8VlnYoLjeFmeFlg2_zlRxj428LqUlYlVowTIptUiIP3baq0fe2-F99POmbKO9YjggsOm0pgpL-xte_oVvj0sqiqOkSOx6B7ByvNe-d_g'           
               url = url.split("bcov_auth")[0]+b
-            elif "jw-prod" in url:
-              url = url.replace(url.split("/")[-1], res+'.mp4')
+            # elif "jw-prod" in url:
+            #   url = url.replace(url.split("/")[-1], res+'.mp4')
 
             elif ".pdf" in url:
                 url = url.replace(" ","%20")
