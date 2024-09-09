@@ -228,7 +228,7 @@ async def account_login(bot: Client, m: Message):
 
                 elif "youtu" in url:
                     try:
-                        await bot.send_photo(chat_id=m.chat_id, photo=thumb, caption=ccyt)
+                        await bot.send_photo(chat_id=m.chat.id, photo=thumb, caption=ccyt)
                     except Exception as e:
                         await m.reply_text(str(e))    
                         time.sleep(1)    
