@@ -4,7 +4,7 @@ services:
   app:
     container_name: srcbot
     build: .
-    command: gunicorn app:app & python3 main.py
+    command: bash bash.sh
     environment:
       API_ID: '21179966' # Your API HASH from my.telegram.org
       API_HASH: 'd97919fb0a3c725e8bb2a25bbb37d57c' # Your API ID from my.telegram.org
