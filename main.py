@@ -1,4 +1,3 @@
-
 from pyrogram.errors.exceptions.bad_request_400 import StickerEmojiInvalid 
 import requests
 import m3u8
@@ -170,7 +169,7 @@ async def account_login(bot: Client, m: Message):
                         url = re.search(r"(https://.*?playlist.m3u8.*?)\"", text).group(1) 
                         
             elif "edge.api.brightcove.com" in url:
-              b ='bcov_auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MjYxMTg5MjAsImNvbiI6eyJpc0FkbWluIjpmYWxzZSwiYXVzZXIiOiJVMFZ6TkdGU2NuQlZjR3h5TkZwV09FYzBURGxOZHowOSIsImlkIjoiY0dWTVUwOXBURU41ZGxaRFNrNXFXR3BKZVhBd1FUMDkiLCJmaXJzdF9uYW1lIjoiVUU0eFUwVjJiSFJETjJSSmRqUllTWFZ2YTJGemR6MDkiLCJlbWFpbCI6IlNIWjNjbU5aVURabmFXMXdaakYzVDFOc1JIUkxjVmhCY2treldrNWphMkpvTW01dE5qWlFXRVZXTkQwPSIsInBob25lIjoiYm1GNldtMW5WVVZpWm1WRWRTdHphMWszTWtwWFp6MDkiLCJhdmF0YXIiOiJLM1ZzY1M4elMwcDBRbmxrYms4M1JEbHZla05pVVQwOSIsInJlZmVycmFsX2NvZGUiOiJPR3hwTVZaU2RWaHdhMVp1Y3pOT1RXcEZaVzlCUVQwOSIsImRldmljZV90eXBlIjoiYW5kcm9pZCIsImRldmljZV92ZXJzaW9uIjoidXBwZXIgdGhhbiAzMSIsImRldmljZV9tb2RlbCI6IlhpYW9NaSBNMjAwN0oxN0MiLCJyZW1vdGVfYWRkciI6IjU0Ljg3LjI3LjI1LCA1NC44Ny4yNy4yNSJ9fQ.RiZihw3vVH5Wu8FflWfjJzB1JaDefOsRsRSTHGIyswVJ4WK8KlDkr0NO0EFKGoUuhGjDJxe0TLCk1JAQHYnm8oKVkOlhRn-IYkixpqIoR2Mb_ro5G8CSf14T8ea7UmKHVnsWkitZdwBaVCHA0h9Rg3q0PHuQNnIr2zubnOBWaPtvdkiDL87JxAoRxdqqEbPdOEiGaP7lyeao0_RPh1AV9ooiTOcefAdrF9g6Al4GDoJ-QsQHkSiz3zYQBhFggeePTB6xbCC3a9LkbeMmpZHV3jpYOmhxgQ_tB_PqT7ePGKq_pTGyWWp058yrJfjoy2P1xI25TzpxUuGKzXd5fGo88Q'           
+              b ='bcov_auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MjM5ODg5NDQsImNvbiI6eyJpc0FkbWluIjpmYWxzZSwiYXVzZXIiOiJVMFZ6TkdGU2NuQlZjR3h5TkZwV09FYzBURGxOZHowOSIsImlkIjoiYWtOblpHSlVWUzlzUzB0RFpERlJaMUJtTVZwRVVUMDkiLCJmaXJzdF9uYW1lIjoiY2xjck0wWnpaWGhoWkhoemQyMXVVV3hSVlZwc1p6MDkiLCJlbWFpbCI6IlJFOVhVVTV6TWl0eVNXOU5aMDFhVGk5VGRIUmFVbWRhV2pWcVEyTldTa0pNVVZNMUwyMUxlRkpUWnowPSIsInBob25lIjoiYjJsR1UwWkRUakpOYjAxWVVITnBVekVyTDBwWVFUMDkiLCJhdmF0YXIiOiJLM1ZzY1M4elMwcDBRbmxrYms4M1JEbHZla05pVVQwOSIsInJlZmVycmFsX2NvZGUiOiJSVUpVZERSMGEwbDBURXhXZGxwWFYzbHFLelpMVVQwOSIsImRldmljZV90eXBlIjoiYW5kcm9pZCIsImRldmljZV92ZXJzaW9uIjoidXBwZXIgdGhhbiAzMSIsImRldmljZV9tb2RlbCI6IlhpYW9NaSBNMjAwN0oxN0MiLCJyZW1vdGVfYWRkciI6IjQ0LjE5Mi4xMjAuMTU5In19.blaAt5iAFST3RDAuBzXnC9hD6NALfx0Jyuc21J3p-uLUcFXW7gOnE2fNqRENwcTTE62-tsv3xV6OZtA3lj0wf0JPD8GD9umMMoLva45SPaxccFP0vHAfoC0wzc4U_Yr5-FnIBv-S6Qhy7IltO7EnMgxHeNhHlmk782-JGEqphYZV4wkcd_GAIpkRo55J6JoF17hdAAzTe-_DkrTlTUI6xBvbR1RvS5n9PZ5UG6LuQiv9MZqHUkLDOmdSc1OJw3o9-YXGV_98b5ysa66oCXHLW2i9u0C98WDNlDGn0kyBVMLrBMvrzZajmsjsC0jyh9T0eY3LvcNnUIl7HSqJ471asQ'           
               url = url.split("bcov_auth")[0]+b
             # elif "jw-prod" in url:
             #   url = url.replace(url.split("/")[-1], res+'.mp4')
