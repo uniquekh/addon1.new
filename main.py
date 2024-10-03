@@ -222,6 +222,10 @@ async def account_login(bot: Client, m: Message):
                                                          'sec-ch-ua-platform': '"Android"',}) as resp:    
                         text = await resp.text()    
                         url = re.search(r"(https://.*?playlist.m3u8.*?)\"", text).group(1)
+
+            elif 'cpvod' in url:
+                xox = fetch_url("https://cpvod.testbook.com/65b2765a734b790a4276d61a/playlist.m3u8", None)
+                url = xox['MPD']
                         
             name1 = links[i][0].replace("\t", "").replace(":", "").replace("/", "").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*", "").replace(".", "").replace("https", "").replace("http", "").strip()    
             name = f'{str(count).zfill(3)})😎𝖘cᾰ𝗺𝗺ⲉ𝗿:)™~{name1[:60]}'  
